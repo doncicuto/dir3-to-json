@@ -7,7 +7,7 @@ import { writeJSONFile } from "./filesystem";
 
 const fileDIR3ToJSON = async (input: string): Promise<string | undefined> => {
   try {
-    const workBook = XLSX.readFile(input);
+    const workBook = XLSX.readFile(input, { cellDates: true });
     if (workBook.SheetNames.length < 1) {
       throw new Error("XLSX file has no sheets");
     }
