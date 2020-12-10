@@ -14,7 +14,7 @@ Los ficheros que contienen los códigos DIR3, así como otra información, de la
 
 Los ficheros que pueden descargarse son hojas de cálculo en el formato XLSX. Para poder manipular esta información en entornos de programación puede resultar más adecuado disponer de ficheros en formato JSON.
 
-Este repositorio contiene el código Javascript para descargar automáticamente del CTT los ficheros XLSX, y convertirlos en ficheros JSON usando NodeJS. El código emplea Typescript.
+Este repositorio contiene el código Typescript para descargar automáticamente del CTT los ficheros XLSX, y convertirlos en ficheros JSON usando NodeJS.
 
 Para utilizarlo puedes seguir estos pasos:
 
@@ -33,7 +33,19 @@ yarn start
 
 ```
 
-En el directorio dist, encontrarás el directorio output donde encontrarás los ficheros convertidos a formato JSON.
+Este es un ejemplo de ejecución:
+
+```(bash)
+Step 1. Create directories...
+Done!
+Step 2. Download files... Please be patient!
+Done!
+Step 3. Convert files to JSON... Please be patient!
+Done!
+All files have been downloaded and converted
+```
+
+En el directorio dist, encontrarás el directorio output donde se guardarán los ficheros convertidos a formato JSON.
 
 Opciones:
 
@@ -55,7 +67,7 @@ The files containing the DIR3 codes, as well as other information, of the differ
 
 The files that can be downloaded are spreadsheets in XLSX format. In order to manipulate this information in programming environments, it may be more appropriate to have files in JSON format.
 
-This repository contains the Javascript code to automatically download XLSX files from the CTT, and convert them into JSON files using NodeJS. The code uses Typescript.
+This repository contains the Typescript code to automatically download XLSX files from the CTT, and convert them into JSON files using NodeJS.
 
 To use it you can follow these steps:
 
@@ -74,7 +86,19 @@ yarn start
 
 ```
 
-In the dist directory, you will find the output directory where you will find the files converted to JSON format.
+Sample execution output:
+
+```(bash)
+Step 1. Create directories...
+Done!
+Step 2. Download files... Please be patient!
+Done!
+Step 3. Convert files to JSON... Please be patient!
+Done!
+All files have been downloaded and converted
+```
+
+In the dist directory, you will find the output directory where the files converted to JSON format will be saved.
 
 Options:
 
