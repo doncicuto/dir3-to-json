@@ -14,10 +14,10 @@ const main = async () => {
   await createDirectory(inputDirectory);
   await createDirectory(outputDirectory);
   showMessage("Done!");
-  showMessage("Step 2. Download files...");
+  showMessage("Step 2. Download files... Please be patient!");
   await downloadDIR3Files(filesDIR3, inputDirectory);
   showMessage("Done!");
-  showMessage("Step 3. Convert files to JSON...");
+  showMessage("Step 3. Convert files to JSON... Please be patient!");
   await filesDIR3ToJSON(filesDIR3, inputDirectory, outputDirectory);
   showMessage("Done!");
   showMessage("All files have been downloaded and converted");
