@@ -41,12 +41,11 @@ const downloadDIR3File = async (
   }
 };
 
-// 3. Download files from CTT
 export const downloadDIR3Files = async (
   files: fileProps[],
   outputPath: string
 ): Promise<void> => {
-  for (let i = 0; i < files.length; i++) {
-    await downloadDIR3File(files[i], outputPath);
+  for (const file of files) {
+    await downloadDIR3File(file, outputPath);
   }
 };
