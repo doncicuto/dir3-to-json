@@ -34,12 +34,14 @@ export const filesDIR3ToJSON = async (
   inputDirectory: string,
   outputDirectory: string
 ): Promise<void> => {
-  for (const file of filesDIR3) {
-    const inputPath = path.join(inputDirectory, `${file.name}.xlsx`);
-    const outputPath = path.join(outputDirectory, `${file.name}.json`);
-    const jsonData = await fileDIR3ToJSON(inputPath);
-    if (jsonData) {
-      await writeJSONFile(outputPath, jsonData);
-    }
-  }
+  await Promise.all(
+    filesDIR3.map(async (file) => {
+      const inputPath = path.join(inputDirectory, `${file.name}.xlsx`);
+      const outputPath = path.join(outputDirectory, `${file.name}.json`);
+      const jsonData = await fileDIR3ToJSON(inputPath);
+      if (jsonData) {
+        await writeJSONFile(outputPath, jsonData);
+      }
+    })
+  );
 };

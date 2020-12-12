@@ -45,7 +45,9 @@ export const downloadDIR3Files = async (
   files: fileProps[],
   outputPath: string
 ): Promise<void> => {
-  for (const file of files) {
-    await downloadDIR3File(file, outputPath);
-  }
+  await Promise.all(
+    files.map(async (file) => {
+      await downloadDIR3File(file, outputPath);
+    })
+  );
 };
