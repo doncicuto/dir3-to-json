@@ -63,7 +63,7 @@ The Common Directory provides a unified and common Inventory to the entire Admin
 
 All organic units and their public bodies therefore have a code that uniquely identifies them called the DIR3 code.
 
-The files containing the DIR3 codes, as well as other information, of the different Spanish public administrations are publicly available in the Download Area of ​​the Technology Transfer Center of the Electronic Administration Portal (CTT). The url of the download area is [https://administracionelectronica.gob.es/ctt/dir3/descargas-lex.europa.eu](https://administracionelectronica.gob.es/ctt/dir3/descargas)
+The files containing the DIR3 codes, as well as other information, of the different Spanish public administrations are publicly available in the Download Area of ​​the Technology Transfer Center of the Electronic Administration Portal (CTT). The url of the download area is [https://administracionelectronica.gob.es/ctt/dir3/descargas](https://administracionelectronica.gob.es/ctt/dir3/descargas)
 
 The files that can be downloaded are spreadsheets in XLSX format. In order to manipulate this information in programming environments, it may be more appropriate to have files in JSON format.
 
