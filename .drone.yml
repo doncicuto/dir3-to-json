@@ -5,10 +5,14 @@ name: download-json
 steps:
 - name: download
   image: node:lts
+  volumes:
+  - name: output
+    path: ./dist/output
   commands:
   - yarn
   - yarn start
 
-- name: download-json
-  image: node:lts
-
+volumes:
+- name: output
+  host:
+    path: /tmp/dir3-json

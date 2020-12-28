@@ -53,6 +53,10 @@ Opciones:
 - En el directorio src/config tienes el fichero dir3.ts. En ese fichero está un array con todos los ficheros que van a descargarse desde el CTT. Puedes añadir o eliminar las URL de descarga, o modificar el nombre del fichero de salida.
 - En el fichero app.ts tienes la definición de los nombres de los directorios donde se descargarán los ficheros descargados del ctt (input) o donde van a generarse los ficheros JSON (output).
 
+CI:
+
+- Este repositorio está conectado con Drone CI con un fichero de configuración .drone.yml. Si deseas conocer más sobre Drone CI visita la [documentación](https://docs.drone.io/).
+
 ## English version
 
 According to the Spanish Interoperability Scheme
@@ -105,3 +109,7 @@ Options:
 - In the tsconfig.json file, you can modify the option "outDir": "./dist", to change the location where the directories will be created where the CTT files will be downloaded and the JSON files will be generated and especially where the code that transpiles Typescript code into Javascript code. If you modify this directory you must also change the package.json file so that the start script reflects the location of the app.js file that contains the main function.
 - In the src / config directory you have the dir3.ts file. In this file there is an array with all the files that are going to be downloaded from the CTT. You can add or remove the download URLs, or modify the name of the output file.
 - In the app.ts file you have the definition of the names of the directories where the files downloaded from ctt (input) will be downloaded or where the JSON files (output) will be generated.
+
+CI:
+
+- This repository is connected to Drone CI with a configuration file .drone.yml. If you want to know more about Drone CI visit the [documentation](https://docs.drone.io/).
