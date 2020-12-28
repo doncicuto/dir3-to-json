@@ -7,7 +7,7 @@ steps:
   image: node:lts
   volumes:
   - name: output
-    path: ./dist/output
+    path: /drone/src/.git/dist/output
   commands:
   - yarn
   - yarn start
