@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: download-json
+
+steps:
+- name: download
+  image: node:lts
+  commands:
+  - yarn
+  - yarn start
+
+- name: download-json
+  image: node:lts
+
