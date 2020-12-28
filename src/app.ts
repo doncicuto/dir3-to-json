@@ -24,3 +24,4 @@ const main = async () => {
 };
 
 main();
+console.log(`Execution at: ${__dirname}`);
