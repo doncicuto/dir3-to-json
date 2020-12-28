@@ -23,5 +23,5 @@ const main = async () => {
   showMessage("All files have been downloaded and converted");
 };
 
+showMessage(`Execution at: ${__dirname}`);
 main();
-console.log(`Execution at: ${__dirname}`);
