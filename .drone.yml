@@ -1,18 +1,10 @@
 kind: pipeline
-type: docker
+type: kubernetes
 name: download-json
 
 steps:
 - name: download
   image: node:lts
-  volumes:
-  - name: output
-    path: /drone/src/dist/output
   commands:
   - yarn
   - yarn start
-
-volumes:
-- name: output
-  host:
-    path: /tmp/dir3-json
