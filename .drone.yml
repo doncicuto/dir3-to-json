@@ -1,6 +1,6 @@
 kind: pipeline
 type: kubernetes
-name: download-json
+name: json-to-db
 
 steps:
 - name: download
@@ -8,3 +8,8 @@ steps:
   commands:
   - yarn
   - yarn start
+- name: clone dir3-to-db repo
+  image: alpine/git
+  commands:
+  - git clone https://github.com/doncicuto/dir3-to-db
+  - ls /drone/src
