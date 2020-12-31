@@ -21,6 +21,14 @@ steps:
       from_secret: database_url
   commands:
   - cd /drone/src/dir3-to-db && yarn && yarn start
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: slack_webhook
+    channel: general
+  when:
+    status: [ success, failure ]
 
 trigger:
   event:
