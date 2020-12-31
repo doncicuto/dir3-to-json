@@ -21,3 +21,7 @@ steps:
       from_secret: database_url
   commands:
   - cd /drone/src/dir3-to-db && yarn && yarn start
+
+trigger:
+  event:
+  - cron
