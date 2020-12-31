@@ -12,8 +12,6 @@ steps:
   image: alpine/git
   commands:
   - git clone https://github.com/doncicuto/dir3-to-db
-  - ls /drone/src
-  - ls /drone/src/dist
-  - ls /drone/src/dir3-to-db
-  - mv /drone/src/dist/output/*.json /drone/src/dir3-to-db/src/utils/filesToImport
+  - ls /drone/src/dist/output/*.json
+  - ls -l /drone/src/dir3-to-db/src
   - ls /drone/src/dir3-to-db/src/utils/filesToImport
