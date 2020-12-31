@@ -3,15 +3,20 @@ type: kubernetes
 name: json-to-db
 
 steps:
-- name: download
+- name: "download and create json files"
   image: node:lts
   commands:
   - yarn
   - yarn start
-- name: "clone dir3-to-db repo"
+- name: "clone dir3-to-db repo and add json files"
   image: alpine/git
   commands:
   - git clone https://github.com/doncicuto/dir3-to-db
-  - mkdir /drone/src/dir3-to-db/src/utils/filesToImport
   - mv /drone/src/dist/output/*.json /drone/src/dir3-to-db/src/utils/filesToImport/
-  - ls /drone/src/dir3-to-db/src/utils/filesToImport
+- name: "import json to db"
+  image: node:lts
+  environment:
+    DATABASE_URL:
+      from_secret: database_url
+  commands:
+  - cd /drone/src/dir3-to-db && yarn && yarn start
