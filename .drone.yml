@@ -12,6 +12,7 @@ steps:
   image: alpine/git
   commands:
   - git clone https://github.com/doncicuto/dir3-to-db
+  - mkdir /drone/src/dir3-to-db/src/utils/filesToImport
   - mv /drone/src/dist/output/*.json /drone/src/dir3-to-db/src/utils/filesToImport/
 - name: "import json to db"
   image: node:lts
