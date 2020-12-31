@@ -8,8 +8,9 @@ steps:
   commands:
   - yarn
   - yarn start
-- name: clone dir3-to-db repo
+- name: "clone dir3-to-db repo"
   image: alpine/git
   commands:
   - git clone https://github.com/doncicuto/dir3-to-db
-  - ls /drone/src
+  - mv dist/output/*.json dir3-to-db/src/utils/filesToImport
+  - ls dir3-to-db/src/utils/filesToImport
