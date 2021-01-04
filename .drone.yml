@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: kubernetes
 name: json-to-db
@@ -33,3 +34,8 @@ steps:
 trigger:
   event:
   - cron
+---
+kind: signature
+hmac: ec28b554ae06445a74805f925e12c8b4e02d4bdf8c01993180af8317898699b7
+
+...
